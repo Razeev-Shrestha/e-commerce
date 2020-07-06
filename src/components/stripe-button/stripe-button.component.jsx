@@ -1,5 +1,6 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
+import Swal from 'sweetalert2';
 
 const StripeCheckoutButton = ({ price }) => {
     const priceForStripe = price * 100;
@@ -8,7 +9,13 @@ const StripeCheckoutButton = ({ price }) => {
     
     const onToken = token => {
         console.log(token);
-        alert('payment Successful');
+             Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your Payment is Successed',
+            showConfirmButton: false,
+            timer: 1500
+          })
     }
 
     return (
