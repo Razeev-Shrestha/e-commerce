@@ -9,6 +9,15 @@ export const SignInContainer = styled.div`
         display: flex;
         justify-content: space-between;
     }
+
+    @media screen and (max-width:800px){
+     width:280px;
+
+     .buttons{
+         display:grid;
+         padding-top:20px;
+     }
+    }
 `;
 
 export const TitleContainer = styled.h2`
